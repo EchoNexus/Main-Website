@@ -1,0 +1,150 @@
+body {
+    background-color: #000;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.top-bar {
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.neon-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    animation: rainbow-text 5s linear infinite;
+}
+
+.neon-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    animation: rainbow-title 5s linear infinite;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    animation:rainbow-title 2.5s linear infinite;
+}
+
+.spacing {
+    width: 2rem;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+  
+.box {
+    width: 160px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+  
+.box:hover {
+    animation: rainbow-box 5s linear infinite; /* Apply the rainbow-text animation */
+}
+
+.box img {
+    max-width: 100px; /* Adjust the max width of the logo as needed */
+}
+@keyframes rainbow-text {
+    0% {
+        text-shadow: 0 0 10px rgba(148, 0, 211, 0.75), 0 0 20px rgba(75, 0, 130, 0.75), 0 0 30px rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(0, 128, 0, 0.75), 0 0 20px rgba(255, 255, 0, 0.75), 0 0 30px rgba(255, 165, 0, 0.75);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.75), 0 0 20px rgba(255, 0, 0, 0.75), 0 0 30px rgba(255, 255, 255, 0.75);
+    }
+}
+
+@keyframes rainbow-box {
+    0% {
+        color: rgba(255, 69, 0, 0.75), 0 0 20px rgba(255, 0, 0, 0.75), 0 0 30px rgba(255, 255, 255, 0.75);
+        box-shadow: 0 0 10px rgba(148, 0, 211, 0.75), 0 0 20px rgba(75, 0, 130, 0.75), 0 0 30px rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        color: rgba(0, 128, 0, 0.75), 0 0 20px rgba(255, 255, 0, 0.75), 0 0 30px rgba(255, 165, 0, 0.75);
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.75), 0 0 20px rgba(255, 255, 0, 0.75), 0 0 30px rgba(255, 165, 0, 0.75);
+    }
+    100% {
+        color: rgba(148, 0, 211, 0.75), 0 0 20px rgba(75, 0, 130, 0.75), 0 0 30px rgba(0, 0, 255, 0.75);
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.75), 0 0 20px rgba(255, 0, 0, 0.75), 0 0 30px rgba(255, 255, 255, 0.75);
+    }
+}
+
+@keyframes rainbow-title {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 69, 0, 0.75), 0 0 20px rgba(255, 0, 0, 0.75), 0 0 30px rgba(255, 255, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(0, 128, 0, 0.75), 0 0 20px rgba(255, 255, 0, 0.75), 0 0 30px rgba(255, 165, 0, 0.75);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(148, 0, 211, 0.75), 0 0 20px rgba(75, 0, 130, 0.75), 0 0 30px rgba(0, 0, 255, 0.75);
+    }
+}
